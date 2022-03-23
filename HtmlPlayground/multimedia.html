@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Multimedia</h1>
+  <p>Source:<a href="http://https://www.w3schools.com/html/html_media.asp" target="_blank" rel="noopener noreferrer">w3schools Multimedia</a></p>
+  
+  <h2>Recommended audio formats</h2>
+  <ul>
+    <li><strong>MP3</strong></li>
+    <li>Ogg</li>
+    <li><strong>WAV</strong></li>
+    <li>MP4 (video format containing audio only)</li>
+  </ul>
+
+  <h2>Recommended video formats</h2>
+  <ul>
+    <li><strong>MP4 (Recommended by Youtube</strong></li>
+    <li>Ogg</li>
+    <li>WebM</li>
+  </ul>
+
+  <h1>HTML Video</h1>
+  <p>With controls:</p>
+  <video src="media/publicstreetdisco.mp4" width="320" height="240" controls="controls"></video>
+
+  <p>With controls, using source tag to define different video formats (in theory)</p>
+  <video width="320" height="240" controls>
+    <source src="media/publicstreetdisco.mp4" type="video/mp4">
+    Your browser does not support video.
+  </video>
+
+  <p>muted autoplay:</p>
+  <video width="320" height="240" src="media/publicstreetdisco.mp4" controls autoplay muted>
+    <source src="media/publicstreetdisco.mp4" type="video/mp4">
+    Your browser does not support video.
+  </video>
+
+  <h1>HTML Audio</h1>
+  <audio src="media/balloon.mp3" controls="controls"></audio>
+  <p>You can also include autoplay and mute attribute and define multiple source file formats using the source tag.</p>
+</body>
+</html>

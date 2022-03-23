@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>HTML Forms</h1>
+
+  <h2>1) Personal Data</h2>
+  <form action="" target="_blank" method="post"> <!-- action="/action_page.php" -->
+    <label for="firstname">First Name</label>
+    <input type="text" name="firstname" id="firstname"><label for=""></label>
+    <label for="lastname">Last Name</label><input type="text" name="lastname" id="lastname">
+    <input type="radio" name="gender" id="male" value="male">
+    <label for="male">male</label>
+    <input type="radio" name="gender" id="female" value="female">
+    <label for="female">female</label>
+    <input type="checkbox" name="legal" id="legal">
+    <label for="legal">I agree that my data can be used for marketing research purposes.</label>
+    <input type="submit" value="submit">
+  </form>
+
+<h1>Autocomplete</h1>
+<form action="" autocomplete="on">
+  <input type="text" name="autocomplete" id="theword">
+  <label for="theword">The word</label>
+</form>
+
+  <h3>Sponanious target attribute test</h3>
+  <a href="http://google.com" target="_blank" rel="noopener noreferrer">blank</a>
+  <a href="http://google.com" target="_top" rel="noopener noreferrer">top</a>
+  <a href="http://google.com" target="_self" rel="noopener noreferrer">self</a>
+  <div style="height: 100px;"><a href="http://google.com" target="_parent" rel="noopener noreferrer">parent</a></div>
+
+  <h1>Learnings</h1>
+  <ul>
+    <li>input type="radio" name="": name attribute must contain the same value for all radio buttons if they belong together</li>
+    <li>Adding a label to a radio button will allow a user to select the radio button by clicking on the text.</li>
+    <li>The name attribute is mandatory for input tags (except submit?)</li>
+  </ul>
+</body>
+</html>

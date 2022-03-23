@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Units of Measurement</title>
+  <style>
+    /** {
+      padding: 0;
+      margin: 0;
+    }*/
+    .px {
+      border: 2px solid #ff652f;
+      width: 200px;
+      font-size: 20px;
+    }
+    /*body {
+      width: 5000px; /* shows that percent relates to its parent /
+    } */
+    .percent {
+      border: 2px solid #ff652f;
+      width: 50%;
+      font-size: 50%;
+    }
+    .vw {
+      border: 2px solid #ff652f;
+      width: 50vw;
+      height: 30vh;
+    }
+    html {
+      /* font-size: 10px;*/
+      font-size: 1.5rem;
+    }
+    .rem {
+      border: 2px solid #ff652f;
+      font-size: 1rem;
+      padding: 1rem;
+    }
+    ul {
+      font-size: 2em;
+    }
+  </style>
+</head>
+<body>
+  <h3>Px</h3>
+  <div class="px">
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum iure, deserunt quas consectetur sapiente totam commodi nesciunt earum aliquam ratione nam, nulla laboriosam ea, saepe distinctio iste hic cumque accusamus.
+  </div>
+  <h3>percent</h3>
+  <div class="percent">
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum iure, deserunt quas consectetur sapiente totam commodi nesciunt earum aliquam ratione nam, nulla laboriosam ea, saepe distinctio iste hic cumque accusamus.
+  </div>
+  <h3>vw and vh</h3>
+  <div class="vw">
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum iure, deserunt quas consectetur sapiente totam commodi nesciunt earum aliquam ratione nam, nulla laboriosam ea, saepe distinctio iste hic cumque accusamus.
+  </div>
+  <h3>rem</h3>
+  <div class="rem">
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum iure, deserunt quas consectetur sapiente totam commodi nesciunt earum aliquam ratione nam, nulla laboriosam ea, saepe distinctio iste hic cumque accusamus.
+  </div>
+  <h3>em</h3>
+  <div class="em">
+    <ul>
+      <li>Lorem, ipsum dolor.</li>
+      <ul>
+        <li>Lorem, ipsum dolor.</li>
+        <ul>
+          <li>Lorem, ipsum dolor.</li>
+        </ul>
+      </ul>
+    </ul>
+  </div>
+</body>
+</html>

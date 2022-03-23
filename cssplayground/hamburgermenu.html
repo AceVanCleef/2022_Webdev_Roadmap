@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hamburger Menu CSS</title>
+  <script src="https://kit.fontawesome.com/4e3244b93a.js" crossorigin="anonymous"></script>
+  <style>
+    * {
+      box-sizing: border-box; /* prevents issues with margin */
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+    a:hover {
+      color: #999999;
+    }
+
+    /* header */
+    .header {
+      /*text-align: center;*/
+      padding: 1.15rem;
+      background-color: #232A34;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.25rem;
+    }
+    .logo span {
+      margin-left: 1rem;
+    }
+
+    .searchbar {
+      width: 50%;
+      margin-left: 1.15rem;
+    }
+    .searchbar form {
+      display: flex;
+      justify-content: space-around;
+      background: #ffffff;
+      box-shadow: 0 -3px 5px inset;
+      border-radius: 0.25rem;
+      border: 1px solid #fff;
+    }
+    .searchbar form input {
+      background-color: transparent;
+      border: 0 solid transparent;
+      padding: 0.75rem 1rem;
+      flex: 5 5;
+    }
+    .searchbar form input:active {
+      border-color: #c8c8c8;
+    }
+    .searchbar form button {
+      background-color: transparent;
+      border: 0 solid transparent;
+      padding: 0 0.75rem;
+    }
+    .searchbar form button:hover {
+      background-color: #c8c8c8;
+      border: 0 solid transparent;
+      padding: 0 0.75rem;
+    }
+
+    .nav {
+      display: flex;
+      list-style-type: none;
+      justify-content: space-between;
+      align-items: center;
+      margin-left: auto;
+      margin: 0;
+      padding: 0;
+    }
+    .navitem {
+      margin-left: 0.75rem;
+    }
+    .navitem-4 {
+      margin-left: 1.15rem;
+    }
+    .navitem-4 a {
+      background-color: #05A081;
+      padding: 0.75rem 1.75rem;
+      border-radius: 0.25rem;
+    }
+    .navitem-4 a:hover {
+      background-color: #2f4f4f;
+    }
+
+    /* responsive navbar */
+    .nav-mobile, .hamburger {
+      display: none;
+    }
+    .hamburger {
+      margin-left: 1.15rem; 
+    }
+
+    @media (max-width: 800px) {
+      .logo span, .nav {
+        display: none;
+      }
+      .hamburger, .nav-mobile {
+        display: inherit;
+      }
+      .searchbar {
+        width: 95%;
+      }
+
+      .nav-mobile {
+        position: fixed;
+        height: 90vh;
+      }
+    }
+    @media (max-width: 600px) {
+      
+    }
+
+    /* main content */
+    .row {
+      display: flex;
+      flex-wrap: wrap; /* ensures that images get linebreaked to a row below when user reduces browser's window width */
+    }
+    .column {
+      flex: 25%; /* sets flex-basis */
+    }
+
+    .column img {
+      padding: 4px;
+      width: 100%; /* we want 100% of available width (of .column) */
+      vertical-align: middle;
+    }
+
+    @media (max-width: 800px) {
+      .column {
+        flex: 50%;
+      }
+    }
+    @media (max-width: 600px) {
+      .column {
+        flex: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <a href="#" class="escape-button">
+      <div class="logo">
+        <img src="./media/logo/letter-p-32x32g.png" alt="" />
+        <span>Pixels</span>
+      </div>
+    </a>
+    <div class="searchbar">
+      <form action="">
+        <input type="search" placeholder="Search for free picture" required>
+        <button>
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+    </div>
+    <ul class="nav">
+      <li class="navitem navitem-1"><a href="#">Explore</a></li>
+      <li class="navitem navitem-2"><a href="#">Livense</a></li>
+      <li class="navitem navitem-3"><a href="#">Upload</a></li>
+      <li class="navitem navitem-4"><a href="#">Join</a></li>
+    </ul>
+    <a class="hamburger" href="#"><i class="fa-solid fa-bars"></i></a>
+    <ul class="nav-mobile">
+      <li class="navitem-mobile">Home</li>
+      <hr>
+      <li class="navitem-mobile"><a href="#">Discover Photos</a></li>
+      <li class="navitem-mobile"><a href="#">Popular Searches</a></li>
+      <li class="navitem-mobile"><a href="#">Free Videos</a></li>
+      <li class="navitem-mobile"><a href="#">Challenges</a></li>
+      <li class="navitem-mobile"><a href="#">Leaderboards</a></li>
+      <li class="navitem-mobile"><a href="#">Pixels Blog</a></li>
+      <hr>
+      <li class="navitem-mobile"><a href="#">Login</a></li>
+      <li class="navitem-mobile"><a href="#">Join</a></li>
+      <li class="navitem-mobile"><a href="#">Change Language</a></li>
+      <li class="navitem-mobile"><a href="#">License</a></li>
+      <hr>
+      <li class="navitem-mobile"><a href="#">Apps and Ps Plugins</a></li>
+      <li class="navitem-mobile"><a href="#">FAQ</a></li>
+      <li class="navitem-mobile"><a href="#">About us</a></li>
+      <li class="navitem-mobile"><a href="#">Imprint and Terms</a></li>
+      <hr>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img src="./media/img/1.jpg" alt="">
+      <img src="./media/img/2.jpg" alt="">
+      <img src="./media/img/3.jpg" alt="">
+      <img src="./media/img/4.jpg" alt="">
+      <img src="./media/img/5.jpg" alt="">
+      <img src="./media/img/6.jpg" alt="">
+      <img src="./media/img/7.jpg" alt="">
+      <img src="./media/img/29.jpg" alt="">
+    </div>
+
+    <div class="column">
+      <img src="./media/img/8.jpg" alt="">
+      <img src="./media/img/9.jpg" alt="">
+      <img src="./media/img/10.jpg" alt="">
+      <img src="./media/img/11.jpg" alt="">
+      <img src="./media/img/12.jpg" alt="">
+      <img src="./media/img/13.jpg" alt="">
+      <img src="./media/img/14.jpg" alt="">
+      <img src="./media/img/30.jpg" alt="">
+    </div>
+
+    <div class="column">
+      <img src="./media/img/15.jpg" alt="">
+      <img src="./media/img/16.jpg" alt="">
+      <img src="./media/img/17.jpg" alt="">
+      <img src="./media/img/18.jpg" alt="">
+      <img src="./media/img/19.jpg" alt="">
+      <img src="./media/img/20.jpg" alt="">
+      <img src="./media/img/21.jpg" alt="">
+      <img src="./media/img/31.jpg" alt="">
+    </div>
+
+    <div class="column">
+      <img src="./media/img/22.jpg" alt="">
+      <img src="./media/img/23.jpg" alt="">
+      <img src="./media/img/24.jpg" alt="">
+      <img src="./media/img/25.jpg" alt="">
+      <img src="./media/img/26.jpg" alt="">
+      <img src="./media/img/27.jpg" alt="">
+      <img src="./media/img/28.jpg" alt="">
+      <img src="./media/img/32.jpg" alt="">
+    </div>
+  </div>
+</body>
+</html>

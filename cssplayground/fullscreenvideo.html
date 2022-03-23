@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Create a Video Background With CSS</title>
+  <style>
+    #background-video {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+
+    h1, h2 {
+      color: white;
+      font-family: Trebuchet MS;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 6rem;
+      margin-top: 30vh;
+    }
+
+    h2 { font-size: 3rem; }
+
+    @media (max-width: 750px) {
+      #background-video { display: none; }
+      body {
+        background: url("https://assets.codepen.io/6093409/river.jpg") no-repeat;
+        background-size: cover;
+      }
+  }
+
+  main {
+    background-color: lightblue;
+    font-size: 2rem;
+    margin-top: 50vh;
+    padding: 10px;
+    position: relative;
+  }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>How to Create a Video Background With CSS</h1>
+    <h2>Engage visitors with your background video</h2>
+    <video id="background-video" autoplay loop muted poster="https://assets.codepen.io/6093409/river.jpg">
+      <source src="https://assets.codepen.io/6093409/river.mp4" type="video/mp4">
+    </video>
+  </div>
+  
+  <main>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos tempora cupiditate voluptatum rerum, porro eligendi error deleniti excepturi quis delectus necessitatibus maxime aspernatur eaque, mollitia vitae quaerat autem aliquam explicabo.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos tempora cupiditate voluptatum rerum, porro eligendi error deleniti excepturi quis delectus necessitatibus maxime aspernatur eaque, mollitia vitae quaerat autem aliquam explicabo.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos tempora cupiditate voluptatum rerum, porro eligendi error deleniti excepturi quis delectus necessitatibus maxime aspernatur eaque, mollitia vitae quaerat autem aliquam explicabo.</p>
+  </main>
+</body>
+</html>

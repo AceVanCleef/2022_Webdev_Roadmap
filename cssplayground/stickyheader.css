@@ -1,0 +1,49 @@
+* {
+  /* resetting browser deafults */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 200vh;
+  width: 100vw;
+  padding: 0; /* could probably be left away */
+}
+
+#content {
+  padding: 2rem;
+}
+
+#header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  padding: 5px;
+  margin: 0;
+  background: #272727;
+}
+
+#header * {
+  display: inline-block;
+  color: #fff;
+}
+
+#headertitle,
+#logo {
+  position: absolute;
+  bottom: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+  position: absolute;
+  right: 90px;
+  bottom: 15px;
+}
+
+.navmenu {
+  margin: 0 10px;
+}

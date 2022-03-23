@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Flexbox Grid</title>
+  <style>
+    * {
+      box-sizing: border-box; /* prevents issues with margin */
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    .header {
+      text-align: center;
+      padding: 25px;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap; /* ensures that images get linebreaked to a row below when user reduces browser's window width */
+    }
+    .column {
+      flex: 25%; /* sets flex-basis */
+    }
+
+    .column img {
+      padding: 4px;
+      width: 100%; /* we want 100% of available width (of .column) */
+      vertical-align: middle;
+    }
+
+    @media (max-width: 800px) {
+      .column {
+        flex: 50%;
+      }
+    }
+    @media (max-width: 600px) {
+      .column {
+        flex: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Responsive Image Grid</h1>
+    <p>Resize the browser to see the responsive effect</p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img src="./media/img/1.jpg" alt="">
+      <img src="./media/img/2.jpg" alt="">
+      <img src="./media/img/3.jpg" alt="">
+      <img src="./media/img/4.jpg" alt="">
+      <img src="./media/img/5.jpg" alt="">
+      <img src="./media/img/6.jpg" alt="">
+      <img src="./media/img/7.jpg" alt="">
+      <img src="./media/img/29.jpg" alt="">
+    </div>
+
+    <div class="column">
+      <img src="./media/img/8.jpg" alt="">
+      <img src="./media/img/9.jpg" alt="">
+      <img src="./media/img/10.jpg" alt="">
+      <img src="./media/img/11.jpg" alt="">
+      <img src="./media/img/12.jpg" alt="">
+      <img src="./media/img/13.jpg" alt="">
+      <img src="./media/img/14.jpg" alt="">
+      <img src="./media/img/30.jpg" alt="">
+    </div>
+
+    <div class="column">
+      <img src="./media/img/15.jpg" alt="">
+      <img src="./media/img/16.jpg" alt="">
+      <img src="./media/img/17.jpg" alt="">
+      <img src="./media/img/18.jpg" alt="">
+      <img src="./media/img/19.jpg" alt="">
+      <img src="./media/img/20.jpg" alt="">
+      <img src="./media/img/21.jpg" alt="">
+      <img src="./media/img/31.jpg" alt="">
+    </div>
+
+    <div class="column">
+      <img src="./media/img/22.jpg" alt="">
+      <img src="./media/img/23.jpg" alt="">
+      <img src="./media/img/24.jpg" alt="">
+      <img src="./media/img/25.jpg" alt="">
+      <img src="./media/img/26.jpg" alt="">
+      <img src="./media/img/27.jpg" alt="">
+      <img src="./media/img/28.jpg" alt="">
+      <img src="./media/img/32.jpg" alt="">
+    </div>
+  </div>
+</body>
+</html>

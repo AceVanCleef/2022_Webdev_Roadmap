@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Flexbox in 100 seconds</title>
+  <style>
+    .flex-container {
+      display: flex;
+      background-color: DodgerBlue;
+    }
+    .flex-col {
+      flex-direction: column;
+      background: #c8c8c8;
+    }
+
+    .flex-container > div {
+      background-color: #f1f1f1;
+      margin: 10px;
+      padding: 20px;
+      font-size: 30px;
+    }
+
+    .flex-1 {
+      flex: 1;
+    }
+    .flex-2 {
+      flex: 2;
+    }
+
+    .justify-flex-start {
+      justify-content: flex-start;
+    }
+    .justify-space-evenly {
+      justify-content: space-evenly;
+    }
+    .justify-space-between {
+      justify-content: space-between;
+    }
+    .justify-flex-end {
+      justify-content: flex-end;
+    }
+
+    .align-center {
+      align-items:stretch;
+      height: 8rem;
+    }
+
+    .vertical-flex {
+      display: flex;
+      flex-direction: column;
+      background: #c8c8c8;
+      justify-content: center;
+      align-items: center;
+      height: 20rem;
+    }
+    .vertical-flex > div {
+      background-color: #f1f1f1;
+      margin: 10px;
+      padding: 20px;
+      font-size: 30px;
+    }
+  </style>
+</head>
+<body>
+  <h3>flex row</h3>
+  <div class="flex-container">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+  <h3>flex column</h3>
+  <div class="flex-container flex-col">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>flex property</h3>
+  <p>flex: 1</p>
+  <div class="flex-container">
+    <div class="flex-1">1</div>
+    <div class="flex-1">2</div>
+    <div class="flex-1">3</div>
+  </div>
+  <p>flex: 2;</p>
+  <div class="flex-container">
+    <div class="flex-1">1</div>
+    <div class="flex-2">2</div>
+    <div class="flex-1">3</div>
+  </div>
+
+  <h3>Alignment</h3>
+  <div class="flex-container justify-flex-start">
+    <div class="">1</div>
+    <div class="">2</div>
+    <div class="">3</div>
+  </div>
+  <div class="flex-container justify-space-evenly">
+    <div class="">1</div>
+    <div class="">2</div>
+    <div class="">3</div>
+  </div>
+  <div class="flex-container justify-space-between">
+    <div class="">1</div>
+    <div class="">2</div>
+    <div class="">3</div>
+  </div>
+  <div class="flex-container justify-flex-end">
+    <div class="">1</div>
+    <div class="">2</div>
+    <div class="">3</div>
+  </div>
+  <h3>Align vertically</h3>
+  <div class="flex-container align-center justify-flex-end">
+    <div class="">1</div>
+    <div class="">2</div>
+    <div class="">3</div>
+  </div>
+  <h3>Vertically</h3>
+  <div class="vertical-flex">
+    <div style="width: 50px;">1</div>
+    <div style="width: 50px;">2</div>
+    <div style="width: 50px;">3</div>
+  </div>
+</body>
+</html>

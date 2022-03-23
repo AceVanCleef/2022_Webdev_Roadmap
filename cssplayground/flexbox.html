@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Crash Course</title>
+  <link rel="stylesheet" href="flexbox-educational-additions.css">
+  <style>
+    .flexbox-container {
+      display: flex;
+      height: 95vh;
+    }
+    
+    /*
+    .flexbox-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: center;
+      align-content: flex-end;
+      height: 95vh;
+    }
+    */
+
+    .flexbox-container-col {
+      height: 95vh;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-flow: column wrap;
+    }
+
+    .flexbox-item {
+      /*flex-basis: 15%;*/ /* replaced by flex: ...; in item-n classes */
+      background-color: #ff652f;
+      border: 3px solid #272727;
+      color: #fff;
+      font-size: 2em;
+      padding: 20px;
+      margin: 10px;
+      /* turns item into a container */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .item-1 {
+      min-height: 50px;
+      flex: 1 1 15%;
+      order: 2;
+    }
+    .item-2 {
+      min-height: 100px;
+      flex: 1 1 15%;
+      order: 1;
+    }
+    .item-3 {
+      min-height: 150px;
+      flex: 5 5 15%;
+      order: 3;
+    }
+  </style>
+</head>
+<body>
+ 
+   <div class="flexbox-container">
+    <div class="flexbox-item item-1">Main content</div>
+    <div class="flexbox-item item-2">Left Aside</div>
+    <div class="flexbox-item item-3">Right Aside</div>
+  </div>
+ <!-- 
+  <div class="flexbox-container-col">
+    <div class="flexbox-item item-1">1</div>
+    <div class="flexbox-item item-2">2</div>
+    <div class="flexbox-item item-3">3</div>
+  </div> -->
+</body>
+</html>

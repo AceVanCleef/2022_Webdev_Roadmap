@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid in 100</title>
+  <style>
+    /* {
+      box-sizing: border-box;
+      margin: 0;
+    }*/
+    /* GRID container*/
+    main {
+      display: grid;
+      grid-template-areas: 
+        "topbar topbar topbar"
+        "ads content sidebar"
+        "footer footer footer";
+      
+      grid-template-columns: 1fr 3fr 1fr;
+      grid-template-rows: 50px calc(100vh - 120px) 70px;
+
+      gap: 0 50px;
+
+      align-items: center;
+      justify-items: center;
+    }
+
+    /* GRID items */
+    header {
+      grid-area: topbar;
+    }
+    aside {
+      grid-area: ads;
+    }
+    article {
+      grid-area: content;
+    }
+    nav {
+      grid-area: sidebar;
+    }
+    footer {
+      grid-area: footer;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>this is a header</header>
+    <aside>ads here</aside>
+    <article>content belongs here</article>
+    <nav>abc list</nav>
+    <footer>footer</footer>
+  </main>
+</body>
+</html>
